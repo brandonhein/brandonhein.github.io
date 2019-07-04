@@ -9,8 +9,7 @@ $("#zip-lookup-btn").click(function(e){
         success: function(results) {
             var formatter = new ColorJson();
             var prettyJson = formatter.colorify(results);
-            $("#method").html("GET");
-            $("#request-url").html(url);
+            $("#request-url").html('<b>GET</b> ' + url);
             $("#location-lookup-results").html(prettyJson);
         }
     })
@@ -26,8 +25,7 @@ $("#what-time-is-it").click(function(e){
         success: function(results) {
             var formatter = new ColorJson();
             var prettyJson = formatter.colorify(results);
-            $("#method").html("GET");
-            $("#request-url").html(url);
+            $("#request-url").html('<b>GET</b> ' + url);
             $("#location-lookup-results").html(prettyJson);
         }
     })
