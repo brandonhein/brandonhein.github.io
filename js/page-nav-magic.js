@@ -3,7 +3,7 @@ $("#about-me").click(function(e){
         type: "GET",
         url: "/pages/aboutme/index.html",
         success: function(results) {
-            $("sub-page").html(results);
+            $("#sub-page").html(results);
         }
     })
 });
@@ -14,7 +14,7 @@ $("#experiences").click(function(e){
         type: "GET",
         url: "/pages/experiences/index.html",
         success: function(results) {
-            $("sub-page").html(results);
+            $("#sub-page").html(results);
         }
     })
 });
@@ -25,7 +25,7 @@ $("#location-lookup").click(function(e){
         type: "GET",
         url: "/pages/locationlookup/index.html",
         success: function(results) {
-            $("sub-page").html(results);
+            $("#sub-page").html(results);
         }
     })
 });
