@@ -1,7 +1,13 @@
 <div id="location-lookup-area">
+    <h5>Location Lookup API</h5>
+    <p>
+        I wanted to take some public data and expose it via an API. Leveraging AWS Lambda and AWS API Gateway, I achieved a Serverless Application 
+        that will spin up and use resources when invoked, as well as provide data related to a zip code.
+    </p>
     <div class="row">
         <div class="row">
             <div class="input-field col s2">
+                <p>This endpoint returns back associated current times in the US timezones</p>
                 <button id="what-time-is-it" class="waves-effect waves-light btn" type="button">What Time Is It?</button>
             </div>
             <div class="input-field col s4">
@@ -11,6 +17,11 @@
             </div>
         </div>
     </div>
+    <div id="location-lookup-tech-request">
+        <strong id="method"></strong>
+        <p id="request-url"></p>
+    </div>
+    <p>Response:</p>
     <pre class="row" id="location-lookup-results">
     </pre>
 </div>

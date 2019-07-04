@@ -9,6 +9,8 @@ $("#zip-lookup-btn").click(function(e){
         success: function(results) {
             var formatter = new ColorJson();
             var prettyJson = formatter.colorify(results);
+            $("#method").html("GET");
+            $("#request-url").html(url);
             $("#location-lookup-results").html(prettyJson);
         }
     })
@@ -16,13 +18,16 @@ $("#zip-lookup-btn").click(function(e){
 
 $("#what-time-is-it").click(function(e){
     e.preventDefault();
+    var url = "https://1njp7ql9lb.execute-api.us-east-2.amazonaws.com/whattimeisit/please";
     $.ajax({
         type: "GET",
-        url: "https://1njp7ql9lb.execute-api.us-east-2.amazonaws.com/whattimeisit/please",
+        url: url,
         async: true,
         success: function(results) {
             var formatter = new ColorJson();
             var prettyJson = formatter.colorify(results);
+            $("#method").html("GET");
+            $("#request-url").html(url);
             $("#location-lookup-results").html(prettyJson);
         }
     })
