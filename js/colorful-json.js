@@ -4,10 +4,10 @@ var ColorJson = function(){
 ColorJson.prototype = {
     colorify(json) {
         if (typeof json != 'string'){
-            json = JSON.stringify(json, null, '\t');
+            json = JSON.stringify(json, null, 2);
         }
 
-        /*json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+        json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
         return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function (match) {
             var cls = 'number';
             if (/^"/.test(match)) {
@@ -26,6 +26,6 @@ ColorJson.prototype = {
                 result = result + "<br/>";
             }
             return result;
-        });*/
+        });
     }
 }
