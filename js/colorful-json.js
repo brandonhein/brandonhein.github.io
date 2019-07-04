@@ -21,7 +21,11 @@ ColorJson.prototype = {
             } else if (/null/.test(match)) {
                 cls = 'null';
             }
-            return '<span class="' + cls + '">' + match + '</span>';
+            var result = '<span class="' + cls + '">' + match + '</span>';
+            if (cls == 'boolean' || cls == 'string' || cls == 'number' || cls == 'null') {
+                result = result + "<br/>";
+            }
+            return result;
         });
     }
 }
