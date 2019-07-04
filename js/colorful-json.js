@@ -22,9 +22,9 @@ ColorJson.prototype = {
                 cls = 'null';
             }
             var result = '<span class="' + cls + '">' + match + '</span>';
-            if (cls == 'boolean' || cls == 'string' || cls == 'number' || cls == 'null') {
-                result = result + "<br/>";
-            }
+            //if (cls == 'boolean' || cls == 'string' || cls == 'number' || cls == 'null') {
+            //    result = result + "<br/>";
+            //}
             return result;
         });
     }
