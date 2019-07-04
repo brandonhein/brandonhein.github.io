@@ -7,7 +7,9 @@ $("#zip-lookup-btn").click(function(e){
         url: url,
         async: true,
         success: function(results) {
-            alert(JSON.stringify(results));
+            var formatter = new ColorJson();
+            var prettyJson = formatter.colorify(results);
+            $("#location-lookup-results").html(prettyJson);
         }
     })
 });
