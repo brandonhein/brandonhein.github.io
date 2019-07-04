@@ -1,3 +1,31 @@
 <div id="address-validation-area">
-    
+    <h5>Address Validation Service API</h5>
+    <p>
+        why
+    </p>
+    <div class="row">
+        <div class="row">
+            <div class="input-field col s4">
+                <input id="street" type="text" />
+                <label for="street">House # and street name</label>
+            </div>
+            <div class="input-field col s4">
+                <input id="city" type="text" />
+                <label for="city">City</label>
+            </div>
+            <div class="input-field col s4">
+                <input id="state" type="text" />
+                <label for="state">State</label>
+            </div>
+        </div>
+        <button id="zip-lookup-btn" class="waves-effect waves-light btn" type="button">Validate</button>
+    </div>
+    <div id="address-validation-tech-request">
+        <p id="request-url"></p>
+    </div>
+    <p>Response:</p>
+    <pre class="row" id="address-validation-results">
+    </pre>
 </div>
+<script src="./js/colorful-json.js"></script>
+<script src="./js/address-validation-invoker.js"></script>
