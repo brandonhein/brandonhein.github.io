@@ -21,7 +21,9 @@ $("#what-time-is-it").click(function(e){
         url: "https://1njp7ql9lb.execute-api.us-east-2.amazonaws.com/whattimeisit/please",
         async: true,
         success: function(results) {
-            alert(JSON.stringify(results));
+            var formatter = new ColorJson();
+            var prettyJson = formatter.colorify(results);
+            $("#location-lookup-results").html(prettyJson);
         }
     })
 });
