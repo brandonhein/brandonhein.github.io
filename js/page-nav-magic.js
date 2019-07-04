@@ -29,3 +29,14 @@ $("#location-lookup").click(function(e){
         }
     })
 });
+
+$("#address-validation").click(function(e){
+    e.preventDefault();
+    $.ajax({
+        type: "GET",
+        url: "/pages/addressvalidation/index.html",
+        success: function(results) {
+            $("#sub-page").html(results);
+        }
+    })
+});
