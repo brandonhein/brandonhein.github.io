@@ -2,9 +2,16 @@
     <h5>Location Lookup API</h5>
     <p>
         I wanted to take some public data and expose it via an API. Leveraging AWS Lambda and AWS API Gateway, I achieved a Serverless Application 
-        that will spin up and use resources when invoked, as well as provide data related to a zip code.
-        Using Lambda and the API gateway, you only pay for the resources you use
+        that will spin up and use resources when invoked, as well as provide data related to a zip code. Data like longitude, latitude, county fips, etc.
+        Using Lambda and the API gateway, you only pay for the resources you use.
     </p>
+    <p>
+        This API handles multiple zip codes in a request (batching), they are delimited by ','. Example: 49783,90210,85001.  That helps applications
+        that leverage this data to make one call out to this API and not a couple dozen times for one zip code.  The API comes with an 'IsAwake' field,
+        that calculates if a location is eligible to be called. This extremely helpful for applications that need to know a zip code is eligible to be called 
+        given specific state requirements on telemarking calling.  
+    </p>
+    <p>Give it a try</p>
     <div class="row">
         <div class="row">
             <div class="input-field col s3">
