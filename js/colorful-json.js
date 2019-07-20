@@ -2,7 +2,7 @@ var ColorJson = function(){
 }
 
 ColorJson.prototype = {
-    colorify(json) {
+    colorify: function(json) {
         if (typeof json != 'string'){
             json = JSON.stringify(json, null, 2);
         }
